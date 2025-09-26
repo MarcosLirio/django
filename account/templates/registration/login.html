@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Login</h1>
+    {% if forms.errors %}
+        <p>Usuário ou senha incorreto, favor tentar novamente!</p>
+    {% else %}
+        <p>Preencha o formulário para fazer Login</p>
+    {% endif %}
+    <div class="login-form">
+        <form action="{% url "login" %}" method="post">
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{next}}">
+            <p><input type="submit" value="Login"></p>
+        </form>
+
+    </div>
+
+{% endblock  %}
+
