@@ -26,6 +26,10 @@ urlpatterns = [
     path('tasks/<int:pk>/edit/', TaskUpdateView.as_view(), name = 'task-edit'),
     path('tasks/<int:pk>/delete/', TaskDeleteView.as_view(), name = 'task-delete'),
     path('tasks/create/', TaskCreateView.as_view(), name = 'task-create'),
+<<<<<<< HEAD
     path('account/', include('account.urls')),
+=======
+    path('account/', include('account.urls'))
+>>>>>>> a10bc74bf2ffe6154a49a862fd926313d1090f11
 
 ]

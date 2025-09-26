@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block  %}
+    <h1>Sessão Encerrada</h1>
+    <p>Obrigador por nos visitar. Volte sempre!
+    <a href="{% url "login" %}" class="btn btn-primary">Acessar Novamente</a></p>
+{% endblock  %}
